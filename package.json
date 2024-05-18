@@ -1,21 +1,17 @@
 {
-  "name": "pokedex",
+  "name": "_",
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "clean": "cd android && gradlew clean && cd ..",
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "lint": "eslint .",
-    "start": "react-native start --experimental-debugger",
-    "test": "jest --coverage"
+    "start": "react-native start",
+    "test": "jest"
   },
   "dependencies": {
-    "formik": "^2.4.6",
     "react": "18.2.0",
-    "react-native": "0.74.1",
-    "styled-components": "^6.1.11",
-    "yup": "^1.4.0"
+    "react-native": "0.74.1"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
@@ -25,8 +21,6 @@
     "@react-native/eslint-config": "0.74.83",
     "@react-native/metro-config": "0.74.83",
     "@react-native/typescript-config": "0.74.83",
-    "@testing-library/react-native": "^12.5.0",
-    "@types/jest": "^29.5.12",
     "@types/react": "^18.2.6",
     "@types/react-test-renderer": "^18.0.0",
     "babel-jest": "^29.6.3",
