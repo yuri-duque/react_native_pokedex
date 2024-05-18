@@ -1,10 +1,10 @@
 import {Text} from 'react-native';
-import {Container} from '../../components/Container';
+import {SafeAreaView} from 'react-native-safe-area-context';
 
 export const DetailsScreen = () => {
   return (
-    <Container>
+    <SafeAreaView>
       <Text>Details Screen</Text>
-    </Container>
+    </SafeAreaView>
   );
 };

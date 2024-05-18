@@ -1,10 +1,10 @@
 import {Text} from 'react-native';
-import {Container} from '../../components/Container';
+import {SafeAreaView} from 'react-native-safe-area-context';
 
 export const ListScreen = () => {
   return (
-    <Container>
+    <SafeAreaView>
       <Text>List Screen</Text>
-    </Container>
+    </SafeAreaView>
   );
 };
