@@ -1,12 +1,13 @@
 {
-  "name": "_",
+  "name": "pokedex",
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "clean": "cd android && gradlew clean && cd ..",
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "lint": "eslint .",
-    "start": "react-native start",
+    "start": "react-native start --experimental-debugger",
     "test": "jest"
   },
   "dependencies": {
