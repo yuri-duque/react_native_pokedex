@@ -1,9 +1,10 @@
-import {Text, View} from 'react-native';
+import {Text} from 'react-native';
+import {Container} from '../../components/Container';
 
 export const ListScreen = () => {
   return (
-    <View>
+    <Container>
       <Text>List Screen</Text>
-    </View>
+    </Container>
   );
 };

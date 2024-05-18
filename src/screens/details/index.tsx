@@ -1,9 +1,10 @@
-import {Text, View} from 'react-native';
+import {Text} from 'react-native';
+import {Container} from '../../components/Container';
 
 export const DetailsScreen = () => {
   return (
-    <View>
+    <Container>
       <Text>Details Screen</Text>
-    </View>
+    </Container>
   );
 };
