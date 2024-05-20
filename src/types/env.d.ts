@@ -1,3 +1,5 @@
-declare module '@env' {
-  export const POKEDEX_API_URL: string;
+declare var process : {
+  env: {
+    POKEDEX_API_URL: string
+  }
 }
