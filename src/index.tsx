@@ -1,13 +1,14 @@
 import React from 'react';
 import {StatusBar} from './components/StatusBar';
 import {AppStack} from './routes';
+import ThemeProvider from './contexts/ThemeProvider';
 
 export const App = () => {
   return (
-    <>
-      <StatusBar backgroundColor="#5E8D48" barStyle="light-content" />
+    <ThemeProvider>
+      <StatusBar />
       <AppStack />
-    </>
+    </ThemeProvider>
   );
 };
 

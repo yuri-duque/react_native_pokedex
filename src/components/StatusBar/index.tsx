@@ -1,7 +1,9 @@
 import {StatusBar as RNStatusBar, StyleSheet, View} from 'react-native';
-import {StatusBarProps} from './types';
 
-export const StatusBar = ({backgroundColor, barStyle}: StatusBarProps) => {
+export const StatusBar = () => {
+  const backgroundColor = '#000000';  
+  const barStyle = 'light-content';
+
   return (
     <View style={[styles.statusBar, {backgroundColor}]}>
       <RNStatusBar
