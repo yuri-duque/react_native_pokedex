@@ -1,13 +1,16 @@
 import React from 'react';
 import {StatusBar} from './components/StatusBar';
+import {PokemonProvider} from './contexts/Pokemon';
+import {ThemeProvider} from './contexts/Theme';
 import {AppStack} from './routes';
-import ThemeProvider from './contexts/ThemeProvider';
 
 export const App = () => {
   return (
     <ThemeProvider>
       <StatusBar />
-      <AppStack />
+      <PokemonProvider>
+        <AppStack />
+      </PokemonProvider>
     </ThemeProvider>
   );
 };
