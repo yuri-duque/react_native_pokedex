@@ -1,44 +1,10 @@
-type TypeColor = {
-  main: string;
-  light: string;
-  dark: string;
-};
-
-export type Theme = {
-  colors: {
-    text: string;
-    background: string;
-    success: string;
-    error: string;
-    pokemonTypeColor: {
-      bug: TypeColor;
-      dark: TypeColor;
-      dragon: TypeColor;
-      electric: TypeColor;
-      fairy: TypeColor;
-      fighting: TypeColor;
-      fire: TypeColor;
-      flying: TypeColor;
-      ghost: TypeColor;
-      grass: TypeColor;
-      ground: TypeColor;
-      ice: TypeColor;
-      normal: TypeColor;
-      poison: TypeColor;
-      psychic: TypeColor;
-      rock: TypeColor;
-      steel: TypeColor;
-      water: TypeColor;
-    };
-  };
-};
-
 export const DefaultTheme: Theme = {
   colors: {
-    text: '#ffffff',
-    background: '#000000',
+    white: '#ffffff',
+    black: '#000000',
     success: '#28a745',
     error: '#dc3545',
+    pokemonColor: '#ffffff',
     pokemonTypeColor: {
       fire: {main: '#fb6c6c', light: '#f88c8b', dark: '#c55656'},
       grass: {main: '#48d0b0', light: '#5ddfc6', dark: '#3aa88b'},
@@ -60,4 +26,40 @@ export const DefaultTheme: Theme = {
       steel: {main: '#B7B7CE', light: '#CDCCD9', dark: '#8F8F9E'},
     },
   },
+};
+
+type TypeColor = {
+  main: string;
+  light: string;
+  dark: string;
+};
+
+export type Theme = {
+  colors: {
+    black: string;
+    white: string;
+    success: string;
+    error: string;
+    pokemonColor: string;
+    pokemonTypeColor: {
+      bug: TypeColor;
+      dark: TypeColor;
+      dragon: TypeColor;
+      electric: TypeColor;
+      fairy: TypeColor;
+      fighting: TypeColor;
+      fire: TypeColor;
+      flying: TypeColor;
+      ghost: TypeColor;
+      grass: TypeColor;
+      ground: TypeColor;
+      ice: TypeColor;
+      normal: TypeColor;
+      poison: TypeColor;
+      psychic: TypeColor;
+      rock: TypeColor;
+      steel: TypeColor;
+      water: TypeColor;
+    };
+  };
 };
