@@ -1,11 +1,12 @@
 import React, {useEffect, useState} from 'react';
 import {SafeAreaView} from 'react-native-safe-area-context';
+import {Input} from '../../components/Input';
+import {PokemonList} from '../../components/PokemonList';
 import {usePokemonContext} from '../../contexts/Pokemon';
+import {Pokemon} from '../../models/pokemon';
+import {pokemonApi} from '../../service/pokemonApi';
 import {MainView} from './styles';
-import { PokemonList } from '../../components/PokemonList';
-import { TextInput } from 'react-native';
-import { Pokemon } from '../../models/pokemon';
-import { pokemonApi } from '../../service/pokemonApi';
+import { Image, Text } from 'react-native';
 
 export const ListScreen = () => {
   const {pokemons, setPokemons} = usePokemonContext();
@@ -20,7 +21,7 @@ export const ListScreen = () => {
 
   const onChangeText = (text: string) => {
     setSearch(text);
-    const filteredPokemons = pokemons?.filter((pokemon) => {
+    const filteredPokemons = pokemons?.filter(pokemon => {
       return pokemon.name.includes(text.toLowerCase());
     });
     setFilteredPokemons(filteredPokemons ?? []);
@@ -29,11 +30,12 @@ export const ListScreen = () => {
   useEffect(() => {
     getPokemons();
   }, []);
-  
+
   return (
     <SafeAreaView>
       <MainView>
-        {/* <TextInput value={search} onChangeText={onChangeText}/> */}
+        <Input value={search} onChangeText={onChangeText} />
+        <Text style={{backgroundColor: "red", width: "auto"}}>123</Text>
         <PokemonList pokemons={filteredPokemons} />
       </MainView>
     </SafeAreaView>

@@ -8,8 +8,8 @@ export const PokemonContext = createContext<PokemonContextData | undefined>(
 );
 
 export const PokemonProvider = ({children}: PokemonProviderProps) => {
-  const [pokemon, setPokemon] = useState<any | undefined>();
-  const [pokemons, setPokemons] = useState<any[]>([]);
+  const [pokemon, setPokemon] = useState<Pokemon | undefined>();
+  const [pokemons, setPokemons] = useState<Pokemon[]>([]);
 
   const theme = useTheme();
 

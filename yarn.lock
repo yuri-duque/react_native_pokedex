@@ -1720,6 +1720,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@fastify/busboy@npm:^2.0.0":
+  version: 2.1.1
+  resolution: "@fastify/busboy@npm:2.1.1"
+  checksum: 42c32ef75e906c9a4809c1e1930a5ca6d4ddc8d138e1a8c8ba5ea07f997db32210617d23b2e4a85fe376316a41a1a0439fc6ff2dedf5126d96f45a9d80754fb2
+  languageName: node
+  linkType: hard
+
 "@hapi/hoek@npm:^9.0.0, @hapi/hoek@npm:^9.3.0":
   version: 9.3.0
   resolution: "@hapi/hoek@npm:9.3.0"
@@ -7973,6 +7980,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"pokedex-api@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "pokedex-api@npm:2.0.0"
+  dependencies:
+    undici: ^5.24.0
+  checksum: a6824396c2626b5ec4e2e9b70d390152d3ef89da4ec32d59bb59fd96d3c9aed6ef4d95623a1d70c490395b785bba3cbec9129535238f2c82067979eddb95fc13
+  languageName: node
+  linkType: hard
+
 "pokedex@workspace:.":
   version: 0.0.0-use.local
   resolution: "pokedex@workspace:."
@@ -7993,6 +8009,7 @@ __metadata:
     babel-jest: ^29.6.3
     eslint: ^8.19.0
     jest: ^29.6.3
+    pokedex-api: ^2.0.0
     prettier: 2.8.8
     prettier-plugin-organize-imports: ^3.2.4
     react: 18.2.0
@@ -9628,6 +9645,15 @@ __metadata:
   version: 5.26.5
   resolution: "undici-types@npm:5.26.5"
   checksum: 3192ef6f3fd5df652f2dc1cd782b49d6ff14dc98e5dced492aa8a8c65425227da5da6aafe22523c67f035a272c599bb89cfe803c1db6311e44bed3042fc25487
+  languageName: node
+  linkType: hard
+
+"undici@npm:^5.24.0":
+  version: 5.28.4
+  resolution: "undici@npm:5.28.4"
+  dependencies:
+    "@fastify/busboy": ^2.0.0
+  checksum: a8193132d84540e4dc1895ecc8dbaa176e8a49d26084d6fbe48a292e28397cd19ec5d13bc13e604484e76f94f6e334b2bdc740d5f06a6e50c44072818d0c19f9
   languageName: node
   linkType: hard
 
