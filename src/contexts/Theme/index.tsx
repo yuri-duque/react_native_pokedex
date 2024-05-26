@@ -15,16 +15,14 @@ export const ThemeProvider = ({children}: ThemeProviderProps) => {
 
   const handlePokemonColor = (pokemon: string) => {
     const pokemonColor = pokemon
-      ? theme.colors.pokemonTypeColor.grass.main
+      ? theme.colors.pokemonTypeColors.grass.main
       : theme.colors.white;
     setTheme({...theme, colors: {...theme.colors, pokemonColor}});
   };
 
   useEffect(() => {
-    console.log('width', width);
-    console.log('height', height);
     setTheme({...theme, sizes: {dimenions: {width, height}}});
-  }, []);
+  }, [width, height]);
 
   return (
     <ThemeContext.Provider value={{handlePokemonColor}}>

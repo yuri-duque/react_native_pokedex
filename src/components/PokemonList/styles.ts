@@ -4,11 +4,19 @@ type RowProps = {
   cols: number;
 };
 
+const space = 10;
+
+export const Container = styled.View`
+  margin-top: ${space}px;
+  margin-bottom: ${space}px;
+`;
+
 export const Row = styled.View<RowProps>`
   flex-direction: row;
   justify-content: space-between;
-  width: 100%;
-  height: ${({theme, cols}) => theme.sizes.dimenions.width / cols}px;
+  height: ${({theme, cols}) => theme.sizes.dimenions.width / cols - 24}px;
+  margin-right: ${space}px;
+  margin-left: ${space}px;
 `;
 
 export const Col = styled.View`
@@ -17,6 +25,6 @@ export const Col = styled.View`
 `;
 
 export const Separator = styled.View`
-  height: 16px;
-  width: 16px;
+  height: ${space}px;
+  width: ${space}px;
 `;

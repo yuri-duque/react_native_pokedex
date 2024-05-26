@@ -7,4 +7,5 @@ export type PokemonContextData = {
   setPokemonDetails: (pokemon?: any) => void;
   pokemons?: any[];
   setPokemons: (pokemons: any[]) => void;
+  updatePokemonOnList: (pokemon: any) => void;
 };

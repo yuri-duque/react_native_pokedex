@@ -1,19 +1,38 @@
-import {Text} from 'react-native';
-import {Container} from './styles';
+import {useEffect, useState} from 'react';
+import {Pokemon} from '../../../models/pokemon';
+import {pokemonApi} from '../../../service/pokemonApi';
+import {Container, Image, Text} from './styles';
 import {PokemonListItemProps} from './types';
 
-export const PokemonListItem = ({pokemon, index}: PokemonListItemProps) => {
+export const PokemonListItem = ({pokemon}: PokemonListItemProps) => {
+  const [pokemonDetails, setPokemonDetails] = useState<Pokemon>(pokemon);
+
+  const getPokemonDetails = async () => {
+    const pokemonDetails = await pokemonApi.getByName(pokemon.name);
+    setPokemonDetails(pokemonDetails);
+  };
+
+  useEffect(() => {
+    getPokemonDetails();
+  }, []);
+
   return (
-    <Container>
+    <Container pokemon={pokemonDetails}>
       <Text
         style={{
-          textAlign: 'center',
           color: 'white',
           fontSize: 24,
           fontWeight: 'bold',
         }}>
-        {pokemon.name}
+        {pokemonDetails.name}
       </Text>
+      {pokemonDetails.sprites?.front_default && (
+        <Image
+          source={{uri: pokemonDetails.sprites.front_default}}
+          width={100}
+          height={100}
+        />
+      )}
     </Container>
   );
 };
