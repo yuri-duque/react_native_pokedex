@@ -26,6 +26,12 @@ export const DefaultTheme: Theme = {
       steel: {main: '#B7B7CE', light: '#CDCCD9', dark: '#8F8F9E'},
     },
   },
+  sizes: {
+    dimenions: {
+      width: 0,
+      height: 0,
+    },
+  },
 };
 
 type TypeColor = {
@@ -60,6 +66,12 @@ export type Theme = {
       rock: TypeColor;
       steel: TypeColor;
       water: TypeColor;
+    };
+  };
+  sizes: {
+    dimenions: {
+      width: number;
+      height: number;
     };
   };
 };
