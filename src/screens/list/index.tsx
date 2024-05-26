@@ -1,24 +1,27 @@
-import React from 'react';
-import {Button, View} from 'react-native';
+import React, {useEffect} from 'react';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {usePokemonContext} from '../../contexts/Pokemon';
 import {MainView} from './styles';
+import { pokemonGetAll } from '../../service/pokemonApi';
+import { PokemonList } from '../../components/PokemonList';
 
 export const ListScreen = () => {
-  const {pokemon, setPokemonDetails} = usePokemonContext();
+  const {pokemons, setPokemons} = usePokemonContext();
 
-  const onPress = () => {
-    if (pokemon) {
-      setPokemonDetails(undefined);
-    } else {
-      setPokemonDetails({name: 'Pikachu'});
-    }
+  const getPokemons = async () => {
+    const pokemons = await pokemonGetAll();
+    setPokemons(pokemons);
   };
 
+  useEffect(() => {
+    getPokemons();
+  }, []);
+
+  
   return (
     <SafeAreaView>
       <MainView>
-          <Button title="Set Pokemon" onPress={onPress} />
+        <PokemonList pokemons={pokemons} />
       </MainView>
     </SafeAreaView>
   );
