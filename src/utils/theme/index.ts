@@ -5,7 +5,7 @@ export const DefaultTheme: Theme = {
     success: '#28a745',
     error: '#dc3545',
     pokemonColor: '#ffffff',
-    pokemonTypeColor: {
+    pokemonTypeColors: {
       fire: {main: '#fb6c6c', light: '#f88c8b', dark: '#c55656'},
       grass: {main: '#48d0b0', light: '#5ddfc6', dark: '#3aa88b'},
       water: {main: '#75bcfc', light: '#8fd1fe', dark: '#5a95c3'},
@@ -19,7 +19,7 @@ export const DefaultTheme: Theme = {
       ghost: {main: '#735797', light: '#8E70AD', dark: '#5B466D'},
       ground: {main: '#E2BF65', light: '#EED987', dark: '#B89A4F'},
       ice: {main: '#96D9D6', light: '#B1E6E4', dark: '#75AAA7'},
-      normal: {main: '#A8A77A', light: '#C0C08C', dark: '#87875E'},
+      normal: {main: '#cecece', light: '#e2e2e2', dark: '#bbbbbb'},
       poison: {main: '#A33EA1', light: '#B95FB6', dark: '#812F7F'},
       psychic: {main: '#F95587', light: '#FA789F', dark: '#C0446C'},
       rock: {main: '#B6A136', light: '#D0BC5B', dark: '#8F812A'},
@@ -47,7 +47,7 @@ export type Theme = {
     success: string;
     error: string;
     pokemonColor: string;
-    pokemonTypeColor: {
+    pokemonTypeColors: {
       bug: TypeColor;
       dark: TypeColor;
       dragon: TypeColor;
